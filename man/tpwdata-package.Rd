@@ -6,7 +6,7 @@
 \alias{tpwdata-package}
 \title{tpwdata: Grabs Survey data from the Turning Points for Women study}
 \description{
-What the package does (one paragraph).
+This package downloads and prepares survey data from the Turning Points for Women study.
 }
 \author{
 \strong{Maintainer}: Daniel Anderson \email{daniela@uoregon.edu} (\href{https://orcid.org/0000-0003-4699-4680}{ORCID})
