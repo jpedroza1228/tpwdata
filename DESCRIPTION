@@ -13,7 +13,8 @@ Authors@R: c(
              email = "",
              comment = c(ORCID = ""))
     )
-Description: What the package does (one paragraph).
+Description: This package downloads and prepares survey data from the 
+             Turning Points for Women study.
 License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
