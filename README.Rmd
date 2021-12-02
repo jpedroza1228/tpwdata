@@ -20,21 +20,22 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 
-The goal of tpwdata is to ...
+The goal of tpwdata is to pull survey data from qualtrics into R. Eventually, some basic data processing will occur as well. We also plan to build in data validation checks, but most of this has not yet happened.
 
 ## Installation
 
 You can install the development version of **tpw** from [GitHub](https://github.com/) with:
 
-``` r
+```r
 # install.packages("devtools")
 devtools::install_github("Turning-Points-for-Women-Study/tpwdata")
 ```
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+You first should get an API key from qualtrics. You can then set your key with the `set_key()` function, which will also store the base URL for this specific study. You should only have to do this once, and you will likely need to restart R for the changes to take effect. 
 
-```{r example}
+Once you have an API key and you have stored it with `set_key()`, you can download any survey with `get_survey()` by passing the specific name of the survey. If you don't know the name of the survey, you can pass it any name and a list of all available surveys will be returned. For example:
+```{r example, error = TRUE}
 library(tpwdata)
-## basic example code
+get_survey("hello!")
 ```

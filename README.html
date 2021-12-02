@@ -608,15 +608,39 @@ body {
 <p><a href="https://github.com/Turning-Points-for-Women-Study/tpwdata/actions"><img src="data:text/plain; charset=utf-8,Not%20Found" alt="R-CMD-check" /></a></p>
 <!-- badges: end -->
 
-<p>The goal of tpwdata is to …</p>
+<p>The goal of tpwdata is to pull survey data from qualtrics into R. Eventually, some basic data processing will occur as well. We also plan to build in data validation checks, but most of this has not yet happened.</p>
 <h2 id="installation">Installation</h2>
 <p>You can install the development version of <strong>tpw</strong> from <a href="https://github.com/">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># install.packages(&quot;devtools&quot;)</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;Turning-Points-for-Women-Study/tpwdata&quot;</span>)</span></code></pre></div>
 <h2 id="example">Example</h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
+<p>You first should get an API key from qualtrics. You can then set your key with the <code>set_key()</code> function, which will also store the base URL for this specific study. You should only have to do this once, and you will likely need to restart R for the changes to take effect.</p>
+<p>Once you have an API key and you have stored it with <code>set_key()</code>, you can download any survey with <code>get_survey()</code> by passing the specific name of the survey. If you don’t know the name of the survey, you can pass it any name and a list of all available surveys will be returned. For example:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">library</span>(tpwdata)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="co">## basic example code</span></span></code></pre></div>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">get_survey</span>(<span class="st">&quot;hello!&quot;</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co">#&gt; Error in get_survey(&quot;hello!&quot;): Survey name &#39;hello!&#39; is not valid. Survey name should be one of</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co">#&gt; Turning Points for Women Phone Interview 11.07.2021</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="co">#&gt; Recruitment Script - 11.10.2021</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="co">#&gt; Published Pilot Informed Consent - Turning Points for Women Study - Copy</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="co">#&gt; Turning Points for Women Phone Interview 11.18.2021</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co">#&gt; Turning Points for Women Phone Interview - Master Copy 11.09.2021</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="co">#&gt; Turning Points for Women Phone Interview 11.09.2021</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="co">#&gt; Pilot 10.5.2021 Turning Points for Women Phone Interview</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="co">#&gt; Biological Assessment 11.09.2021</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="co">#&gt; Informed Consent - Master Copy 11.29.2021</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="co">#&gt; Biological Assessment 11.05.2021</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="co">#&gt; Turning Points for Women Phone Interview</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="co">#&gt; Biological Assessment - Master Copy 11.01.2021</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="co">#&gt; Undergraduate Research Assistant Onboarding Survey</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="co">#&gt; Informed Consent - 11.02.2021</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="co">#&gt; Research Study Pilot Screener</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a><span class="co">#&gt; Full Pilot - Turning Points for Women Phone Interview</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a><span class="co">#&gt; Turning Points for Women Phone Interview 11.10.2021</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a><span class="co">#&gt; Published Pilot Telephone Interview Part I Training - Copy</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a><span class="co">#&gt; Informed Consent - 11.29.2021</span></span>
+<span id="cb2-23"><a href="#cb2-23"></a><span class="co">#&gt; Biological Assessment - 10.7.2021</span></span>
+<span id="cb2-24"><a href="#cb2-24"></a><span class="co">#&gt; Recruitment Script - 11.09.2021</span></span>
+<span id="cb2-25"><a href="#cb2-25"></a><span class="co">#&gt; Untitled Project</span></span></code></pre></div>
 
 </body>
 </html>
