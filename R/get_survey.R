@@ -10,6 +10,6 @@ get_survey <- function(name) {
       paste0(surveys$name, sep = "\n")
     )
   }
-  id <- surveys$id[survey$name == name]
+  id <- surveys$id[surveys$name == name]
   fetch_survey(surveyID = id)
 }
