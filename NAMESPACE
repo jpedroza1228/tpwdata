@@ -3,4 +3,5 @@
 export(get_survey)
 export(set_key)
 importFrom(qualtRics,all_surveys)
+importFrom(qualtRics,fetch_survey)
 importFrom(qualtRics,qualtrics_api_credentials)

@@ -1,5 +1,5 @@
 #' @keywords internal
-#' @importFrom qualtRics qualtrics_api_credentials all_surveys
+#' @importFrom qualtRics qualtrics_api_credentials all_surveys fetch_survey
 "_PACKAGE"
 
 # The following block is used by usethis to automatically manage
