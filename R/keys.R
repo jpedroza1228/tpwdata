@@ -8,7 +8,7 @@
 set_key <- function(key, ...) {
   qualtrics_api_credentials(
     api_key = key,
-    base_url = "oregon.ca1.qualtrics.com/",
+    base_url = "oregon.ca1.qualtrics.com",
     install = TRUE,
     ...
   )
